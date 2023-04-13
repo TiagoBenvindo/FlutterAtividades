@@ -1,32 +1,12 @@
 import 'package:flutter/material.dart';
 
-class InitialPage extends StatefulWidget {
-  const InitialPage({Key? key}) : super(key: key);
+class InitialCloud extends StatefulWidget {
+  const InitialCloud({super.key});
   @override
-  State<InitialPage> createState() => _InitialPageWidget();
+  State<InitialCloud> createState() => _InitialCloudWidget();
 }
 
-class _InitialPageWidget extends State<InitialPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text("Segunda tela"),
-        backgroundColor: Colors.blueAccent,
-      ),
-      body: const Lister(),
-    );
-  }
-}
-
-class Lister extends StatefulWidget {
-  const Lister({Key? key}) : super(key: key);
-  @override
-  State<Lister> createState() => _Lister();
-}
-
-class _Lister extends State<Lister> {
+class _InitialCloudWidget extends State<InitialCloud> {
   final List<String> selecionados = <String>['Tiago', 'Vamos', 'Luis'];
   final List<bool> values = <bool>[false, false, false];
 

@@ -1,35 +1,12 @@
-import 'dart:html';
+import "package:flutter/material.dart";
 
-import 'package:flutter/material.dart';
-
-import 'package:flutter/material.dart';
-
-class PostoPage extends StatefulWidget {
-  const PostoPage({Key? key}) : super(key: key);
+class InitialUmbrella extends StatefulWidget {
+  const InitialUmbrella({super.key});
   @override
-  State<PostoPage> createState() => _PostoPageWidget();
+  State<InitialUmbrella> createState() => _InitialUmbrella();
 }
 
-class _PostoPageWidget extends State<PostoPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Posto'),
-        backgroundColor: Colors.blueAccent,
-      ),
-      body: const Posto(),
-    );
-  }
-}
-
-class Posto extends StatefulWidget {
-  const Posto({Key? key}) : super(key: key);
-  @override
-  State<Posto> createState() => _Posto();
-}
-
-class _Posto extends State<Posto> {
+class _InitialUmbrella extends State<InitialUmbrella> {
   double valorGasolina = 0.0;
   double valorEtanol = 0.0;
   String valorCalculado = "";
@@ -53,7 +30,6 @@ class _Posto extends State<Posto> {
     return Center(
         child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      // ignore: prefer_const_literals_to_create_immutables
       child: Column(children: [
         TextField(
           keyboardType: TextInputType.number,
